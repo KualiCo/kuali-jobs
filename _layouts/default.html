@@ -7,11 +7,11 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+  <link rel="canonical" href="{{ site.url | relative_url }}{{ page.url | replace:'index.html',''}}">
   <link rel="manifest" href="{{ "site.webmanifest" | relative_url }}">
   <link rel="icon" href="{{ "favicon.ico" | relative_url }}">
   <link rel="apple-touch-icon" href="{{ "icon.png" | relative_url }}">
-  <link rel="stylesheet" href="{{ "css/styles.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
 </head>
 
 <body>

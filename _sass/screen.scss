@@ -1,0 +1,109 @@
+/* general */
+::-moz-selection {
+	text-shadow: none;
+	background: $orange;
+  color: $white;
+}
+
+::selection {
+	text-shadow: none;
+  background: $orange;
+  color: $white;
+}
+
+html {
+	font-size: 62.5%;
+	line-height: 1.9;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: 400;
+	height: 100%;
+	background: $green;
+  @include breakpoint('large') {
+    font-size: 56.5%;
+  }
+  @include breakpoint('medium') {
+    font-size: 50.5%;
+  }
+  @include breakpoint('small') {
+    font-size: 44.5%;
+  }
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: $white;
+}
+
+.constrain {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.condensed {
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* header */
+.header {
+  color: $white;
+  background: $green;
+
+  a {
+    color: $white;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &-content {
+    background: $green url('/img/paper.svg') no-repeat 0 10rem;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+  }
+
+  &-text {
+    max-width: 50rem;
+
+    h1 {
+      font-size: 6rem;
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 2rem;
+      max-width: 45rem;
+    }
+  }
+
+  &-cta {
+    max-width: 45rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* buttons */
+.button {
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  background: $orange;
+  border-radius: 5rem;
+  border: 3px solid $white;
+  display: inline-block;
+  letter-spacing: 1px;
+  transition: all .2s ease;
+
+  &:hover, &:focus {
+    background: tint($orange, 10%);
+  }
+}

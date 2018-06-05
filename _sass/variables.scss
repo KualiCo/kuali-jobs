@@ -1,0 +1,35 @@
+/* colors */
+
+$white: #fff;
+$green: #00b586;
+$orange: #Ef6c00;
+
+/* mixins */
+
+// set page breakpoints
+@mixin breakpoint($point, $value: "") {
+  @if $point == 'large' {
+    @media only screen and (max-width: 1440px) { @content; }
+  }
+  @else if $point == 'medium' {
+    @media only screen and (max-width: 1000px) { @content; }
+  }
+  @else if $point == 'small' {
+    @media only screen and (max-width: 35.5em) { @content; }
+  }
+  @else if $point == 'extra-small' {
+    @media only screen and (max-width: 20em) { @content; }
+  }
+}
+
+/* functions */
+
+// Add percentage of white to a color (tints)
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color (shades)
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}

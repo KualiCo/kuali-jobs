@@ -24,13 +24,13 @@ html {
 	background: $green;
   color: $dark-gray;
   @include breakpoint('large') {
-    font-size: 56.5%;
+    font-size: 52.5%;
   }
   @include breakpoint('medium') {
-    font-size: 50.5%;
+    font-size: 46.5%;
   }
   @include breakpoint('small') {
-    font-size: 44.5%;
+    font-size: 42.5%;
   }
 }
 
@@ -42,15 +42,18 @@ body {
   font-size: 1.8rem;
 }
 
+a {
+  color: $green;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
 .constrain {
   max-width: 1440px;
   margin: 0 auto;
   padding: 3rem;
-
-  &-overflow {
-    max-width: 1600px;
-    padding: 0;
-  }
 }
 
 .condensed {
@@ -66,19 +69,16 @@ body {
 
   a {
     color: $white;
-
-    &:hover, &:focus {
-      text-decoration: none;
-    }
   }
 
   &-bg {
-    background: url('/img/desk-workers.svg') no-repeat left 12rem, url('/img/bubbles.svg') no-repeat right 22rem;
+    background: url('/img/desk-workers.svg') no-repeat left 12rem, url('/img/bubbles.svg') no-repeat right 25rem;
     background-size: auto, 1050px;
     min-height: 65rem;
-    margin-bottom: -25rem;
+    margin: 0 auto -25rem;
+    max-width: 1640px;
     @include breakpoint('large') {
-  	   background-position: -4rem 12rem, right -4rem top 22rem;
+  	   background-position: left -4rem top 12rem, right -4rem top 28rem;
        margin-bottom: -20rem;
     }
   }
@@ -100,12 +100,12 @@ body {
 
     p {
       margin-top: 2rem;
-      max-width: 47.5rem;
+      max-width: 46rem;
     }
   }
 
   &-cta {
-    max-width: 47.5rem;
+    max-width: 46rem;
     margin-top: 3rem;
     display: flex;
     justify-content: flex-end;
@@ -144,7 +144,8 @@ img {
   }
 
   &-shift {
-    margin-left: 20rem;
+    margin-left: auto;
+    margin-right: 1rem;
   }
 
   figcaption {
@@ -162,7 +163,7 @@ img {
 
   sup {
     color: $gray;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 900;
@@ -176,6 +177,11 @@ img {
     max-width: 30rem;
     line-height: 1.1;
     margin-bottom: 2.5rem;
+  }
+
+  img {
+    max-width: 26rem;
+    margin-top: 2rem;
   }
 }
 
@@ -196,18 +202,70 @@ img {
 
 /* sections specific */
 .culture {
-
   .desk-gal {
-    right: 10rem;
+    right: 5rem;
     top: 5rem;
     background: url('/img/desk-gal-avocado-1.svg') no-repeat right 5rem top 10rem, url('/img/desk-gal-avocado-2.svg') no-repeat right 0 bottom 25rem;
   }
 }
 
 .team {
-
   .desk-guy {
-    bottom: 7rem;
+    bottom: 5rem;
+    left: 5rem;
     background: url('/img/desk-guy-avocado-1.svg') no-repeat left 2rem top 13rem, url('/img/desk-guy-avocado-2.svg') no-repeat right 15rem bottom 12rem;
+  }
+}
+
+.benefits {
+  &-list {
+    flex-grow: 2;
+    background: url('/img/benefits.svg') no-repeat left top;
+    position: relative;
+
+    &-bubble {
+      position: absolute;
+      padding: 10rem;
+      margin: -10rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      &.revenue {
+        background-image: url('/img/bubble-blue.svg');
+        left: 16rem;
+        top: 13rem;
+      }
+
+      &.insurance {
+        background-image: url('/img/bubble-purple.svg');
+        left: 16rem;
+        top: 30rem;
+      }
+
+      &.meetings {
+        background-image: url('/img/bubble-gray.svg');
+        left: 38rem;
+        top: 46rem;
+      }
+
+      &.location {
+        background-image: url('/img/bubble-green.svg');
+        left: 50rem;
+        top: 30rem;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: $white;
+      text-transform: uppercase;
+      line-height: 1.2;
+      font-weight: 700;
+      max-width: 18rem;
+      text-align: center;
+      position: relative;
+      top: 0.5rem;
+    }
   }
 }

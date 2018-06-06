@@ -22,6 +22,7 @@ html {
 	font-weight: 400;
 	height: 100%;
 	background: $green;
+  color: $dark-gray;
   @include breakpoint('large') {
     font-size: 56.5%;
   }
@@ -72,7 +73,7 @@ body {
   }
 
   &-bg {
-    background: url('/img/paper.svg') no-repeat left 12rem, url('/img/bubbles.svg') no-repeat right 22rem;
+    background: url('/img/desk-workers.svg') no-repeat left 12rem, url('/img/bubbles.svg') no-repeat right 22rem;
     background-size: auto, 1050px;
     min-height: 65rem;
     margin-bottom: -25rem;
@@ -99,12 +100,12 @@ body {
 
     p {
       margin-top: 2rem;
-      max-width: 45rem;
+      max-width: 47.5rem;
     }
   }
 
   &-cta {
-    max-width: 45rem;
+    max-width: 47.5rem;
     margin-top: 3rem;
     display: flex;
     justify-content: flex-end;
@@ -135,12 +136,20 @@ img {
 }
 
 .image-plus-caption {
-  max-width: 28rem;
-  margin-left: 0;
+  flex-basis: 36rem;
+  margin: 0;
+
+  &-small {
+    flex-basis: 30rem;
+  }
+
+  &-shift {
+    margin-left: 20rem;
+  }
 
   figcaption {
     margin-top: 1rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     color: $light-gray;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -168,20 +177,37 @@ img {
     line-height: 1.1;
     margin-bottom: 2.5rem;
   }
-
-  p {
-    color: $dark-gray;
-  }
 }
-
 
 /* sections general */
 .section {
-  margin: 10rem auto;
+  margin: 12rem auto 5rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+
+  .avatar {
+    position: relative;
+    padding: 20rem;
+    margin: -20rem;
+  }
 }
 
-
 /* sections specific */
+.culture {
+
+  .desk-gal {
+    right: 10rem;
+    top: 5rem;
+    background: url('/img/desk-gal-avocado-1.svg') no-repeat right 5rem top 10rem, url('/img/desk-gal-avocado-2.svg') no-repeat right 0 bottom 25rem;
+  }
+}
+
+.team {
+
+  .desk-guy {
+    bottom: 7rem;
+    background: url('/img/desk-guy-avocado-1.svg') no-repeat left 2rem top 13rem, url('/img/desk-guy-avocado-2.svg') no-repeat right 15rem bottom 12rem;
+  }
+}

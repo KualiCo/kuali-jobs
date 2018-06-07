@@ -1,4 +1,4 @@
-/* general */
+/* ----------- General ---------- */
 *, *:before, *:after {
 	box-sizing: border-box;
 }
@@ -18,7 +18,7 @@
 html {
 	font-size: 62.5%;
 	line-height: 1.9;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	height: 100%;
 	background: $green;
@@ -57,51 +57,62 @@ a {
 }
 
 .condensed {
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
 }
 
-/* header */
+/* ----------- Header ---------- */
 .header {
+	background: $green;
+
+	&-logo {
+		max-width: 20rem;
+	}
+}
+
+/* ----------- Main Banner ---------- */
+
+.banner {
   color: $white;
   background: $green;
   margin-bottom: 25rem;
 
-  a {
-    color: $white;
-  }
-
   &-bg {
-    background: url('../img/desk-workers.svg') no-repeat left 12rem, url('../img/bubbles.svg') no-repeat right 25rem;
-    background-size: auto, 1050px;
-    min-height: 65rem;
-    margin: 0 auto -25rem;
+    background: url('../img/desk-workers.svg') no-repeat left 2rem, url('../img/bubbles.svg') no-repeat right 15rem;
+    margin: 0 auto -35rem;
+		min-height: 65rem;
     max-width: 1640px;
     @include breakpoint('large') {
-  	   background-position: left -4rem top 12rem, right -4rem top 28rem;
-       margin-bottom: -20rem;
+  	   background-position: left -4rem top 2rem, right -4rem top 15rem;
+       margin-bottom: -30rem;
     }
-  }
+	}
 
   &-content {
-    display: flex;
-    justify-content: space-between;
-  }
+		display: flex;
+		justify-content: flex-end;
+	}
 
-  &-text {
+	&-text {
     max-width: 50rem;
+		position: relative;
+		bottom: 10rem;
 
     h1 {
       font-size: 6rem;
       line-height: 1.1;
       font-weight: 400;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     p {
       margin-top: 2rem;
       max-width: 46rem;
     }
+
+		a {
+			color: $white;
+		}
   }
 
   &-cta {
@@ -112,18 +123,18 @@ a {
   }
 }
 
-/* buttons */
+/* ----------- Buttons ---------- */
 .button {
   text-transform: uppercase;
   font-weight: 900;
   text-decoration: none;
-  padding: 1.5rem 5rem;
+  padding: 1.8rem 4.5rem;
   background: $orange;
   border-radius: 5rem;
   border: 3px solid $white;
   display: inline-block;
   letter-spacing: 1px;
-  transition: all .2s ease;
+	color: $white;
 
   &:hover, &:focus {
     background: tint($orange, 10%);
@@ -150,19 +161,19 @@ img {
 
   figcaption {
     margin-top: 1rem;
-    padding: 0 1rem;
-    color: $light-gray;
+    padding: 0 0.5rem;
+    color: $medium-gray;
     font-size: 1.5rem;
     line-height: 1.6;
   }
 }
 
-/* text */
+/* ----------- Text ---------- */
 .paragraph-content {
   max-width: 40rem;
 
   sup {
-    color: $gray;
+    color: $light-gray;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -172,7 +183,7 @@ img {
   h2 {
     color: $blue;
     font-size: 4rem;
-    margin-top: 0;
+    margin-top: -0.5rem;
     font-weight: 300;
     max-width: 30rem;
     line-height: 1.1;
@@ -185,9 +196,9 @@ img {
   }
 }
 
-/* sections general */
+/* ----------- Sections ---------- */
 .section {
-  margin: 12rem auto 5rem;
+  margin: 10rem auto 2.5rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -200,7 +211,6 @@ img {
   }
 }
 
-/* sections specific */
 .culture {
   .desk-gal {
     right: 5rem;
@@ -268,4 +278,70 @@ img {
       top: 0.5rem;
     }
   }
+}
+
+.values {
+	margin-bottom: 12rem;
+
+	&-list {
+		color: $white;
+		background: $blue;
+		flex-grow: 2;
+		margin-left: 5rem;
+		padding: 5rem 5rem 3.5rem;
+
+		h3 {
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 5.6rem;
+			margin: 0 0 3rem;
+			line-height: 1.1;
+		}
+
+		ul {
+			column-count: 2;
+			column-gap: 2rem;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			font-size: 2.4rem;
+
+			li {
+				margin-bottom: 2rem;
+			}
+		}
+
+		&-number {
+			color: $blue;
+			background: $white;
+			border-radius: 50%;
+			font-weight: 900;
+			display: inline-block;
+			width: 4rem;
+			height: 4rem;
+			text-align: center;
+			margin-right: 1.5rem;
+			line-height: 1.6;
+		}
+	}
+}
+
+/* ----------- Footer ---------- */
+.footer {
+	background: $green;
+	color: $white;
+	margin-top: auto;
+
+	&-bg {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h3 {
+			font-size: 3.6rem;
+			margin: 0;
+			display: inline;
+			margin-right: 4rem;
+		}
+	}
 }

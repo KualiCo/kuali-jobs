@@ -16,7 +16,31 @@
 
 <body>
 
+  <header class="header">
+    <div class="header-bg constrain">
+      <div class="header-logo">
+        <a href="{{ "/" | relative_url }}">
+          <img alt="Kuali" src="{{ "img/logo.svg" | relative_url }}" />
+        </a>
+      </div>
+    </div>
+  </header>
+
   {{ content }}
+
+  <footer class="footer">
+    <div class="footer-bg constrain">
+      <div class="mark">
+        <a href="{{ "/" | relative_url }}">
+          <img alt="Kuali" src="{{ "img/mark.svg" | relative_url }}" />
+        </a>
+      </div>
+      <div class="footer-cta">
+        <h3 class="condensed">Seriously, what are you waiting for?</h3>
+        <a href="https://kuali.workable.com/#jobs" class="button">See our openings</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="{{ "js/vendor/modernizr-3.6.0.min.js" | relative_url }}"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

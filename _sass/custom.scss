@@ -72,7 +72,7 @@ a {
   }
 
   &-bg {
-    background: url('/img/desk-workers.svg') no-repeat left 12rem, url('/img/bubbles.svg') no-repeat right 25rem;
+    background: url('../img/desk-workers.svg') no-repeat left 12rem, url('../img/bubbles.svg') no-repeat right 25rem;
     background-size: auto, 1050px;
     min-height: 65rem;
     margin: 0 auto -25rem;
@@ -205,7 +205,7 @@ img {
   .desk-gal {
     right: 5rem;
     top: 5rem;
-    background: url('/img/desk-gal-avocado-1.svg') no-repeat right 5rem top 10rem, url('/img/desk-gal-avocado-2.svg') no-repeat right 0 bottom 25rem;
+    background: url('../img/desk-gal-avocado-1.svg') no-repeat right 5rem top 10rem, url('../img/desk-gal-avocado-2.svg') no-repeat right 0 bottom 25rem;
   }
 }
 
@@ -213,14 +213,14 @@ img {
   .desk-guy {
     bottom: 5rem;
     left: 5rem;
-    background: url('/img/desk-guy-avocado-1.svg') no-repeat left 2rem top 13rem, url('/img/desk-guy-avocado-2.svg') no-repeat right 15rem bottom 12rem;
+    background: url('../img/desk-guy-avocado-1.svg') no-repeat left 2rem top 13rem, url('../img/desk-guy-avocado-2.svg') no-repeat right 15rem bottom 12rem;
   }
 }
 
 .benefits {
   &-list {
     flex-grow: 2;
-    background: url('/img/benefits.svg') no-repeat left top;
+    background: url('../img/benefits.svg') no-repeat left top;
     position: relative;
 
     &-bubble {
@@ -231,32 +231,32 @@ img {
       background-position: center center;
 
       &.revenue {
-        background-image: url('/img/bubble-blue.svg');
+        background-image: url('../img/bubble-blue.svg');
         left: 16rem;
         top: 13rem;
       }
 
       &.insurance {
-        background-image: url('/img/bubble-purple.svg');
+        background-image: url('../img/bubble-purple.svg');
         left: 16rem;
         top: 30rem;
       }
 
       &.meetings {
-        background-image: url('/img/bubble-gray.svg');
-        left: 38rem;
-        top: 46rem;
+        background-image: url('../img/bubble-gray.svg');
+        right: 38rem;
+        bottom: 10rem;
       }
 
       &.location {
-        background-image: url('/img/bubble-green.svg');
-        left: 50rem;
-        top: 30rem;
+        background-image: url('../img/bubble-green.svg');
+        right: 30rem;
+        bottom: 27rem;
       }
     }
 
     h3 {
-      font-size: 2rem;
+      font-size: 2.4rem;
       letter-spacing: 1px;
       color: $white;
       text-transform: uppercase;

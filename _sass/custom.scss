@@ -83,7 +83,7 @@ a {
 		min-height: 65rem;
     max-width: 1640px;
     @include breakpoint('large') {
-  	   background-position: left -4rem top 2rem, right -4rem top 15rem;
+  	   background-position: left -8rem top 2rem, right -8rem top 12rem;
        margin-bottom: -30rem;
     }
 	}
@@ -96,7 +96,7 @@ a {
 	&-text {
     max-width: 50rem;
 		position: relative;
-		bottom: 10rem;
+		bottom: 5rem;
 
     h1 {
       font-size: 6rem;
@@ -240,6 +240,19 @@ img {
       background-repeat: no-repeat;
       background-position: center center;
 
+			h3 {
+	      font-size: 2.4rem;
+	      letter-spacing: 1px;
+	      color: $white;
+	      text-transform: uppercase;
+	      line-height: 1.2;
+	      font-weight: 700;
+	      max-width: 18rem;
+	      text-align: center;
+	      position: relative;
+	      top: 0.5rem;
+	    }
+
       &.revenue {
         background-image: url('../img/bubble-blue.svg');
         left: 16rem;
@@ -263,19 +276,6 @@ img {
         right: 30rem;
         bottom: 27rem;
       }
-    }
-
-    h3 {
-      font-size: 2.4rem;
-      letter-spacing: 1px;
-      color: $white;
-      text-transform: uppercase;
-      line-height: 1.2;
-      font-weight: 700;
-      max-width: 18rem;
-      text-align: center;
-      position: relative;
-      top: 0.5rem;
     }
   }
 }
@@ -342,14 +342,16 @@ img {
 			margin: 0;
 			display: inline;
 			margin-right: 4rem;
+			position: relative;
+			top: 0.5rem;
 		}
 	}
 }
 
 /* ----------- 404 ---------- */
 .not-found {
-	max-width: 60rem;
-	margin: 7rem auto 5rem;
+	max-width: 65rem;
+	margin: 4rem auto 2rem;
 	text-align: center;
 
 	h1 {

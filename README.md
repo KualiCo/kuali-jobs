@@ -2,7 +2,7 @@
 
 ## Tech used
 
-- [Jekyll](https://jekyllrb.com/)
-- [HTML5 Boilerplate](https://html5boilerplate.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Google Web Fonts Helper](https://google-webfonts-helper.herokuapp.com/fonts)
+- [Jekyll](https://jekyllrb.com/) for templating, Sass, and other features
+- [HTML5 Boilerplate](https://html5boilerplate.com/) for CSS resets and other goodies
+- [Google Fonts](https://fonts.google.com/) for their lovely font, Roboto
+- [Google Web Fonts Helper](https://google-webfonts-helper.herokuapp.com/fonts) for using Roboto locally without needing to rely on Google's servers

@@ -350,7 +350,7 @@ img {
 
 /* ----------- 404 ---------- */
 .not-found {
-	max-width: 65rem;
+	max-width: 70rem;
 	margin: 4rem auto 2rem;
 	text-align: center;
 
@@ -358,5 +358,9 @@ img {
 		font-size: 4rem;
 		line-height: 1.2;
 		margin-bottom: 0;
+
+		a {
+			color: $dark-gray;
+		}
 	}
 }

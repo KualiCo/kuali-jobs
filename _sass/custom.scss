@@ -345,3 +345,16 @@ img {
 		}
 	}
 }
+
+/* ----------- 404 ---------- */
+.not-found {
+	max-width: 60rem;
+	margin: 7rem auto 5rem;
+	text-align: center;
+
+	h1 {
+		font-size: 4rem;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+}

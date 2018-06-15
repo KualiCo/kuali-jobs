@@ -54,6 +54,12 @@ a {
   max-width: 1440px;
   margin: 0 auto;
   padding: 3rem;
+	@include breakpoint('medium') {
+		padding: 2.5rem;
+	}
+	@include breakpoint('extra-small') {
+		padding: 2rem;
+	}
 }
 
 .condensed {
@@ -67,6 +73,9 @@ a {
 
 	&-logo {
 		max-width: 19rem;
+		@include breakpoint('medium') {
+			max-width: 17rem;
+	  }
 
 		a {
 			display: block;
@@ -78,28 +87,60 @@ a {
 .banner {
   color: $white;
   background: $green;
-  margin-bottom: 25rem;
+  margin-bottom: 20rem;
+	@include breakpoint('medium') {
+		margin-bottom: 15rem;
+	}
+	@include breakpoint('small') {
+		margin-bottom: 10rem;
+	}
 
   &-bg {
-    background: url('../img/desk-workers.svg') no-repeat left 2rem, url('../img/bubbles.svg') no-repeat right 15rem;
-    margin: 0 auto -35rem;
-		min-height: 65rem;
+    background: url('../img/desk-workers.svg') no-repeat left bottom, url('../img/bubbles.svg') no-repeat right 15rem;
+    margin: 0 auto -20rem;
+		background-size: contain, 100rem;
+		padding-bottom: 0;
     max-width: 1640px;
     @include breakpoint('extra-large') {
-  	   background-position: left -8rem top 2rem, right -8rem top 12rem;
-       margin-bottom: -30rem;
+	  	background-position: left -8rem bottom, right -8rem top 15rem;
     }
+		@include breakpoint('large') {
+			background-size: contain, 80rem;
+		}
+		@include breakpoint('medium') {
+			background-size: 60rem, 80rem;
+			background-position: left -5rem top, right -5rem top 10rem;
+		}
+		@include breakpoint('small') {
+			background: url('../img/bubbles.svg') no-repeat center bottom;
+			padding-bottom: 10rem;
+			margin-bottom: -10rem;
+			background-size: 95rem;
+		}
 	}
 
   &-content {
 		display: flex;
 		justify-content: flex-end;
+		@include breakpoint('small') {
+			justify-content: flex-start;
+		}
 	}
 
 	&-text {
     max-width: 50rem;
 		position: relative;
 		bottom: 5rem;
+		@include breakpoint('large') {
+			max-width: 46rem;
+		}
+		@include breakpoint('medium') {
+			max-width: 42rem;
+		}
+		@include breakpoint('small') {
+			max-width: 75rem;
+			bottom: 0;
+		}
 
     h1 {
       font-size: 6rem;
@@ -111,6 +152,9 @@ a {
     p {
       margin-top: 2rem;
       max-width: 46rem;
+			@include breakpoint('small') {
+				max-width: 100%;
+			}
     }
 
 		a {
@@ -123,6 +167,14 @@ a {
     margin-top: 3rem;
     display: flex;
     justify-content: flex-end;
+		@include breakpoint('large') {
+	  	margin-top: 1.5rem;
+    }
+		@include breakpoint('small') {
+			margin-top: 3rem;
+			justify-content: flex-start;
+			max-width: 100%;
+		}
   }
 }
 
@@ -140,6 +192,13 @@ a {
 	color: $white;
 	line-height: 1.4;
 	text-align: center;
+	@include breakpoint('small') {
+		min-width: 30rem;
+	}
+	@include breakpoint('extra-small') {
+		min-width: 0;
+		width: 100%;
+	}
 
   &:hover, &:focus {
     background: tint($orange, 10%);
@@ -344,18 +403,12 @@ img {
 		@include breakpoint('medium') {
 	    flex-direction: column;
 			text-align: center;
+			padding: 5rem 2.5rem;
 	  }
-
-		.mark {
-			@include breakpoint('medium') {
-		    margin-bottom: 2rem;
-		  }
-		}
 
 		h3 {
 			font-size: 3.6rem;
 			line-height: 1.1;
-			margin: 0;
 			display: inline;
 			margin-right: 4rem;
 			position: relative;

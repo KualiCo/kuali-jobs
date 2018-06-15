@@ -19,10 +19,10 @@ $blue: #468dcb;
     @media only screen and (max-width: 1200px) { @content; }
   }
   @else if $point == 'medium' {
-    @media only screen and (max-width: 960px) { @content; }
+    @media only screen and (max-width: 1000px) { @content; }
   }
   @else if $point == 'small' {
-    @media only screen and (max-width: 640px) { @content; }
+    @media only screen and (max-width: 800px) { @content; }
   }
   @else if $point == 'extra-small' {
     @media only screen and (max-width: 400px) { @content; }

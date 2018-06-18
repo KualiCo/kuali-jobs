@@ -73,9 +73,6 @@ a {
 
 	&-logo {
 		max-width: 19rem;
-		@include breakpoint('medium') {
-			max-width: 17rem;
-	  }
 
 		a {
 			display: block;
@@ -87,7 +84,7 @@ a {
 .banner {
   color: $white;
   background: $green;
-  margin-bottom: 20rem;
+  margin-bottom: 30rem;
 	@include breakpoint('medium') {
 		margin-bottom: 15rem;
 	}
@@ -117,6 +114,9 @@ a {
 			margin-bottom: -10rem;
 			background-size: 95rem;
 		}
+		@include breakpoint('extra-small') {
+			background-size: 75rem;
+		}
 	}
 
   &-content {
@@ -132,13 +132,13 @@ a {
 		position: relative;
 		bottom: 5rem;
 		@include breakpoint('large') {
-			max-width: 46rem;
+			max-width: 45rem;
 		}
 		@include breakpoint('medium') {
-			max-width: 42rem;
+			max-width: 40rem;
 		}
 		@include breakpoint('small') {
-			max-width: 75rem;
+			max-width: 70rem;
 			bottom: 0;
 		}
 
@@ -262,11 +262,15 @@ img {
 
 /* ----------- Sections ---------- */
 .section {
-  margin: 10rem auto 2.5rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
   position: relative;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+	@include breakpoint('extra-large') {
+		overflow: hidden;
+	}
 
   .avatar {
     position: relative;
@@ -276,6 +280,8 @@ img {
 }
 
 .culture {
+	padding-left: 0;
+
   .desk-gal {
     right: 5rem;
     top: 5rem;
@@ -284,6 +290,8 @@ img {
 }
 
 .team {
+	padding-right: 0;
+
   .desk-guy {
     bottom: 5rem;
     left: 5rem;
@@ -292,6 +300,8 @@ img {
 }
 
 .benefits {
+	padding-left: 0;
+
   &-list {
     flex-grow: 2;
     background: url('../img/benefits.svg') no-repeat left top;
@@ -345,6 +355,7 @@ img {
 }
 
 .values {
+	padding-right: 0;
 	margin-bottom: 12rem;
 
 	&-list {

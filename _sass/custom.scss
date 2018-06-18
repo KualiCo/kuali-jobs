@@ -212,11 +212,8 @@ img {
 
 .image-plus-caption {
   flex-basis: 36rem;
+	min-width: 30rem;
   margin: 0;
-
-  &-small {
-    flex-basis: 30rem;
-  }
 
   &-shift {
     margin-left: auto;
@@ -225,16 +222,24 @@ img {
 
   figcaption {
     margin-top: 1rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     color: $medium-gray;
     font-size: 1.5rem;
     line-height: 1.6;
+		@include breakpoint('extra-small') {
+			padding: 0;
+		}
   }
 }
 
 /* ----------- Text ---------- */
 .paragraph-content {
   max-width: 40rem;
+	min-width: 30rem;
+	@include breakpoint('extra-small') {
+		max-width: 100%;
+		min-width: 0;
+	}
 
   sup {
     color: $light-gray;
@@ -271,16 +276,28 @@ img {
 	@include breakpoint('extra-large') {
 		overflow: hidden;
 	}
+	@include breakpoint('extra-small') {
+		flex-direction: column;
+		padding-bottom: 5rem;
+	}
 
 	.item {
 		margin-right: 3rem;
+		@include breakpoint('extra-small') {
+			margin-right: 0;
+			margin-bottom: 5rem;
+		}
 	}
 
   .avatar {
     position: relative;
     z-index: 0;
-		padding: 10rem;
-		margin: -10rem;
+		padding: 20rem;
+		margin: -20rem;
+		@include breakpoint('wide') {
+			padding: 10rem;
+			margin: -10rem;
+		}
   }
 }
 
@@ -290,13 +307,37 @@ img {
 		left: 0;
 		padding-left: 0;
 	}
+	@include breakpoint('extra-small') {
+		padding-left: 2rem;
+	}
+
+	.image-plus-caption-small {
+		@include breakpoint('medium') {
+			flex-basis: 50%;
+		}
+	}
 
   .desk-gal {
 		right: 5rem;
 		top: 2rem;
-		background: url('../img/desk-gal-avocado-1.svg') no-repeat right top, url('../img/desk-gal-avocado-2.svg') no-repeat right top 30rem;
+		background: url('../img/desk-gal-avocado-1.svg') no-repeat right 4rem top 10rem, url('../img/desk-gal-avocado-2.svg') no-repeat right top 40rem;
+		@include breakpoint('wide') {
+			background: url('../img/desk-gal-avocado-1.svg') no-repeat right top, url('../img/desk-gal-avocado-2.svg') no-repeat right top 30rem;
+		}
 		@include breakpoint('extra-large') {
-			right: 0;
+			right: -2rem;
+			background: url('../img/desk-gal-avocado-1.svg') no-repeat right -10rem top, url('../img/desk-gal-avocado-2.svg') no-repeat right -10rem top 30rem;
+		}
+		@include breakpoint('large') {
+			right: -5rem;
+			background: url('../img/desk-gal-avocado-1.svg') no-repeat right -10rem top, url('../img/desk-gal-avocado-2.svg') no-repeat right -10rem top 30rem;
+		}
+		@include breakpoint('medium') {
+			background: url('../img/desk-gal-avocado-1.svg') no-repeat right top 5rem, url('../img/desk-gal-avocado-2.svg') no-repeat right top 35rem;
+			background-size: 35rem, 20rem;
+		}
+		@include breakpoint('small') {
+			display: none;
 		}
 
 		img {
@@ -304,6 +345,18 @@ img {
 			height: 40rem;
 		}
   }
+
+	.vertical-words {
+		@include breakpoint('medium') {
+			display: none;
+		}
+	}
+
+	.paragraph-content {
+		@include breakpoint('extra-large') {
+			margin-right: 0;
+		}
+	}
 }
 
 .team {

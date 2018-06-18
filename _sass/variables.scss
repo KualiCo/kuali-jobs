@@ -12,6 +12,9 @@ $blue: #468dcb;
 
 // set page breakpoints
 @mixin breakpoint($point, $value: "") {
+  @if $point == 'wide' {
+    @media only screen and (max-width: 1640px) { @content; }
+  }
   @if $point == 'extra-large' {
     @media only screen and (max-width: 1440px) { @content; }
   }
@@ -25,6 +28,9 @@ $blue: #468dcb;
     @media only screen and (max-width: 800px) { @content; }
   }
   @else if $point == 'extra-small' {
+    @media only screen and (max-width: 600px) { @content; }
+  }
+  @else if $point == 'narrow' {
     @media only screen and (max-width: 400px) { @content; }
   }
 }

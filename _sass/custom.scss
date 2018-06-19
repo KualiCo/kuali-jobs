@@ -124,6 +124,7 @@ a {
 		justify-content: flex-end;
 		@include breakpoint('small') {
 			justify-content: flex-start;
+			margin-top: 2rem;
 		}
 	}
 
@@ -218,6 +219,9 @@ img {
   &-shift {
     margin-left: auto;
     margin-right: 1rem;
+		@include breakpoint('small') {
+			margin-right: 3rem;
+		}
 		@include breakpoint('extra-small') {
 			margin: 0;
 		}
@@ -287,14 +291,6 @@ img {
 		flex-direction: column;
 	}
 
-	.item {
-		margin-right: 3rem;
-		@include breakpoint('extra-small') {
-			margin-right: 0;
-			margin-bottom: 5rem;
-		}
-	}
-
   .avatar {
     position: relative;
     z-index: 0;
@@ -310,8 +306,31 @@ img {
 	}
 
 	.image-plus-caption-small {
+		margin-right: 3rem;
 		@include breakpoint('small') {
 			flex-basis: 50%;
+		}
+		@include breakpoint('extra-small') {
+			margin-right: 0;
+			margin-bottom: 5rem;
+		}
+	}
+
+	.vertical-word {
+		margin-right: 3rem;
+		@include breakpoint('medium') {
+			display: none;
+		}
+	}
+
+	.paragraph-content {
+		margin-right: 3rem;
+		@include breakpoint('extra-large') {
+			margin-right: 0;
+		}
+		@include breakpoint('extra-small') {
+			margin-right: 0;
+			margin-bottom: 5rem;
 		}
 	}
 
@@ -344,24 +363,16 @@ img {
 			height: 40rem;
 		}
   }
-
-	.vertical-words {
-		@include breakpoint('medium') {
-			display: none;
-		}
-	}
-
-	.paragraph-content {
-		@include breakpoint('extra-large') {
-			margin-right: 0;
-		}
-	}
 }
 
 .team {
 	padding-right: 0;
+	@include breakpoint('small') {
+		padding-left: 0;
+	}
 	@include breakpoint('extra-small') {
 		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 
 	.image-plus-caption {
@@ -406,11 +417,24 @@ img {
 
 .benefits {
 	padding-left: 0;
+	@include breakpoint('small') {
+		padding-left: 0;
+		padding-right: 0;
+		flex-direction: column;
+	}
 
   &-list {
     flex-grow: 2;
-    background: url('../img/benefits.svg') no-repeat left top;
+    background: url('../img/benefits.svg') no-repeat left center;
+		background-size: contain;
     position: relative;
+		margin-right: 3rem;
+		@include breakpoint('small') {
+			margin-right: 0;
+			margin-bottom: 5rem;
+			padding-bottom: 65%;
+			width: 100%;
+		}
 
     &-bubble {
       position: absolute;
@@ -418,6 +442,12 @@ img {
       margin: -10rem;
       background-repeat: no-repeat;
       background-position: center center;
+			@include breakpoint('extra-large') {
+				background-size: 20rem;
+			}
+			@include breakpoint('extra-small') {
+				background-size: 18rem;
+			}
 
 			h3 {
 	      font-size: 2.4rem;
@@ -430,33 +460,67 @@ img {
 	      text-align: center;
 	      position: relative;
 	      top: 0.5rem;
+				@include breakpoint('medium') {
+					padding: 0 1rem;
+				}
+				@include breakpoint('extra-small') {
+					font-size: 2rem;
+				}
 	    }
 
       &.revenue {
         background-image: url('../img/bubble-blue.svg');
-        left: 16rem;
-        top: 13rem;
+				top: 20%;
+        left: 16%;
+				@include breakpoint('extra-small') {
+					top: 3rem;
+					left: 3rem;
+				}
       }
 
       &.insurance {
         background-image: url('../img/bubble-purple.svg');
-        left: 16rem;
-        top: 30rem;
+				top: 47%;
+        left: 16%;
+				@include breakpoint('extra-small') {
+					top: auto;
+					bottom: 3rem;
+					left: 3rem;
+				}
       }
 
       &.meetings {
         background-image: url('../img/bubble-gray.svg');
-        right: 38rem;
-        bottom: 10rem;
+				top: 75%;
+				left: 45%;
+				@include breakpoint('extra-small') {
+					top: auto;
+					right: 3rem;
+					bottom: 3rem;
+					left: auto;
+				}
       }
 
       &.location {
         background-image: url('../img/bubble-green.svg');
-        right: 30rem;
-        bottom: 27rem;
+				top: 47%;
+				left: 55%;
+				@include breakpoint('extra-small') {
+					top: 3rem;
+					right: 3rem;
+					left: auto;
+				}
       }
     }
   }
+
+	.paragraph-content {
+		@include breakpoint('small') {
+			padding: 0 2rem;
+			margin-bottom: 5rem;
+			max-width: 100%;
+		}
+	}
 }
 
 .values {

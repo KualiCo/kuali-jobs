@@ -13,5 +13,6 @@
 - [x] Make layout perfect on smaller screens
 - [x] Test across modern browsers and devices
 - [x] Add parallax scripts
-- [ ] Kill parallax effect on smaller/touch devices
+- [x] Kill parallax effect on smaller/touch devices
+- [ ] Fix mobile issues (fonts not appearing, some horizontal scrolling)
 - [ ] Code review

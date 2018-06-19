@@ -16,13 +16,8 @@
 }
 
 html {
-	font-size: 62.5%;
-	line-height: 1.9;
-  font-family: 'Roboto', sans-serif;
-	font-weight: 400;
 	height: 100%;
-	background: $green;
-  color: $dark-gray;
+	font-size: 62.5%;
   @include breakpoint('extra-large') {
     font-size: 54.5%;
   }
@@ -38,11 +33,16 @@ html {
 }
 
 body {
+	font-size: 1.8rem;
+	line-height: 1.9;
+  font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	background: $green;
+  color: $dark-gray;
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	background: $white;
-  font-size: 1.8rem;
 }
 
 a {
@@ -96,9 +96,6 @@ a.logo-link {
 	@include breakpoint('medium') {
 		margin-bottom: 15rem;
 	}
-	@include breakpoint('small') {
-		margin-bottom: 10rem;
-	}
 
   &-bg {
     background: url('../img/desk-workers.svg') no-repeat left bottom, url('../img/bubbles.svg') no-repeat right 15rem;
@@ -111,20 +108,20 @@ a.logo-link {
     }
 		@include breakpoint('large') {
 			background-position: left -8rem bottom, right -8rem top 15rem;
-			background-size: contain, 80rem;
+			background-size: contain, 85rem;
 		}
 		@include breakpoint('medium') {
-			background-size: 60rem, 80rem;
+			background-size: 60%, 80%;
 			background-position: left -6rem top, right -6rem top 10rem;
 		}
 		@include breakpoint('small') {
 			background: url('../img/bubbles.svg') no-repeat center bottom;
-			padding-bottom: 10rem;
-			margin-bottom: -10rem;
-			background-size: 95rem;
+			padding-bottom: 12rem;
+			margin-bottom: -12rem;
+			background-size: 125rem;
 		}
 		@include breakpoint('extra-small') {
-			background-size: 75rem;
+			background-size: 95rem;
 		}
 	}
 
@@ -142,13 +139,13 @@ a.logo-link {
 		position: relative;
 		bottom: 5rem;
 		@include breakpoint('large') {
-			max-width: 45rem;
+			max-width: 40%;
 		}
 		@include breakpoint('medium') {
-			max-width: 40rem;
+			max-width: 42rem;
 		}
 		@include breakpoint('small') {
-			max-width: 70rem;
+			max-width: 100%;
 			bottom: 0;
 		}
 
@@ -604,6 +601,7 @@ img {
 			display: inline-block;
 			width: 4rem;
 			height: 4rem;
+			line-height: 4rem;
 			text-align: center;
 			margin-right: 1.5rem;
 		}

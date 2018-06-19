@@ -9,7 +9,12 @@
 
 ## To do
 
+- [x] Make layout perfect on smaller screens
+- [x] Test across modern browsers and devices
 - [ ] Add parallax effect via [Rellax.js](https://dixonandmoe.com/rellax/)
-- [ ] Make layout perfect on smaller screens
-- [ ] Test across modern browsers and devices
 - [ ] Code review
+
+## Notes
+
+- Tested on recent versions of Chrome, Firefox, Safari on Mac
+- ~~Firefox on Mac is being really weird with REM sizes under 1000px.~~

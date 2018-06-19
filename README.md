@@ -15,5 +15,5 @@
 - [x] Add parallax scripts
 - [x] Kill parallax effect on smaller/touch devices
 - [x] Fix mobile issues (fonts not appearing, some horizontal scrolling)
-- [ ] Consider using higher contrast colors (white on green / gray on white / etc are non-accessible AA)
+- [ ] Consider using higher contrast colors (white on green / white on blue / gray on white / etc = non-AA-accessible)
 - [ ] Code review

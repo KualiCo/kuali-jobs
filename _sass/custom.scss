@@ -17,8 +17,8 @@
 
 html {
 	height: 100%;
+	background: $green;
 	font-size: 62.5%;
-	overflow-x: hidden;
   @include breakpoint('extra-large') {
     font-size: 54.5%;
   }
@@ -30,6 +30,7 @@ html {
   }
 	@include breakpoint('extra-small') {
     font-size: 42.5%;
+		overflow-x: hidden;
   }
 }
 
@@ -38,7 +39,6 @@ body {
 	line-height: 1.9;
   font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	background: $green;
   color: $dark-gray;
 	min-height: 100%;
 	display: flex;

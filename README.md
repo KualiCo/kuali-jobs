@@ -13,9 +13,5 @@
 - [x] Make layout perfect on smaller screens
 - [x] Test across modern browsers and devices
 - [x] Add parallax scripts
+- [ ] Kill parallax effect on smaller/touch devices
 - [ ] Code review
-
-## Notes
-
-- Tested on recent versions of Chrome, Firefox, Safari on Mac
-- ~~Firefox on Mac is being really weird with REM sizes under 1000px.~~

@@ -5,19 +5,19 @@
 
 ::-moz-selection {
 	text-shadow: none;
-	background: $orange;
+	background: $pink;
   color: $white;
 }
 
 ::selection {
 	text-shadow: none;
-  background: $orange;
+  background: $pink;
   color: $white;
 }
 
 html {
 	height: 100%;
-	background: $green;
+	background: $blue;
 	font-size: 62.5%;
   @include breakpoint('extra-large') {
     font-size: 54.5%;
@@ -29,7 +29,6 @@ html {
     font-size: 46.5%;
   }
 	@include breakpoint('extra-small') {
-    font-size: 42.5%;
 		overflow-x: hidden;
   }
 }
@@ -48,7 +47,7 @@ body {
 }
 
 a {
-  color: $green;
+  color: $blue;
 
   &:hover, &:focus {
     text-decoration: none;
@@ -83,7 +82,7 @@ a.logo-link {
 
 /* ----------- Header ---------- */
 .header {
-	background: $green;
+	background: $blue;
 
 	&-logo {
 		max-width: 19rem;
@@ -93,7 +92,7 @@ a.logo-link {
 /* ----------- Main Banner ---------- */
 .banner {
   color: $white;
-  background: $green;
+  background: $blue;
   margin-bottom: 30rem;
 	@include breakpoint('medium') {
 		margin-bottom: 15rem;
@@ -196,7 +195,7 @@ a.logo-link {
   font-weight: 900;
   text-decoration: none;
   padding: 2.2rem 4.4rem;
-  background: $orange;
+  background: $pink;
   border-radius: 5rem;
   border: 3px solid $white;
   display: inline-block;
@@ -215,7 +214,7 @@ a.logo-link {
 	}
 
   &:hover, &:focus {
-    background: tint($orange, 10%);
+    background: tint($pink, 10%);
   }
 }
 
@@ -601,7 +600,7 @@ img {
 
 /* ----------- Footer ---------- */
 .footer {
-	background: $green;
+	background: $blue;
 	color: $white;
 	margin-top: auto;
 

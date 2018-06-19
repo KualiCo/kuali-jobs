@@ -15,5 +15,5 @@
 - [x] Add parallax scripts
 - [x] Kill parallax effect on smaller/touch devices
 - [x] Fix mobile issues (fonts not appearing, some horizontal scrolling)
-- [ ] Consider using higher contrast colors (almost none of the pairings are AA accessible)
-- [ ] Code review
+- [x] Consider using higher contrast colors (almost none of the pairings are AA accessible)
+- [x] Code review

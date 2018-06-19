@@ -204,6 +204,7 @@ a.logo-link {
 	color: $white;
 	line-height: 1.4;
 	text-align: center;
+	transition: all .15s ease;
 	@include breakpoint('small') {
 		min-width: 30rem;
 	}

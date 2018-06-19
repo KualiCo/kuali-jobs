@@ -449,6 +449,7 @@ img {
       margin: -10rem;
       background-repeat: no-repeat;
       background-position: center center;
+			opacity: .85;
 			@include breakpoint('extra-large') {
 				background-size: 20rem;
 			}

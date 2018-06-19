@@ -32,6 +32,9 @@ html {
   @include breakpoint('medium') {
     font-size: 46.5%;
   }
+	@include breakpoint('extra-small') {
+    font-size: 42.5%;
+  }
 }
 
 body {
@@ -48,6 +51,15 @@ a {
   &:hover, &:focus {
     text-decoration: none;
   }
+}
+
+a.logo-link {
+	display: block;
+	transition: all .15s ease;
+
+	&:hover, &:focus {
+		transform: scale(1.05);
+	}
 }
 
 .constrain {
@@ -73,10 +85,6 @@ a {
 
 	&-logo {
 		max-width: 19rem;
-
-		a {
-			display: block;
-		}
 	}
 }
 
@@ -99,14 +107,15 @@ a {
 		padding-bottom: 0;
     max-width: 1640px;
     @include breakpoint('extra-large') {
-	  	background-position: left -8rem bottom, right -8rem top 15rem;
+	  	background-position: left -6rem bottom, right -6rem top 15rem;
     }
 		@include breakpoint('large') {
+			background-position: left -8rem bottom, right -8rem top 15rem;
 			background-size: contain, 80rem;
 		}
 		@include breakpoint('medium') {
 			background-size: 60rem, 80rem;
-			background-position: left -5rem top, right -5rem top 10rem;
+			background-position: left -6rem top, right -6rem top 10rem;
 		}
 		@include breakpoint('small') {
 			background: url('../img/bubbles.svg') no-repeat center bottom;
@@ -156,6 +165,9 @@ a {
 			@include breakpoint('small') {
 				max-width: 100%;
 			}
+			@include breakpoint('extra-small') {
+				font-size: 2rem;
+			}
     }
 
 		a {
@@ -199,6 +211,7 @@ a {
 	@include breakpoint('extra-small') {
 		min-width: 0;
 		width: 100%;
+		font-size: 2rem;
 	}
 
   &:hover, &:focus {
@@ -218,23 +231,21 @@ img {
 
   &-shift {
     margin-left: auto;
-    margin-right: 1rem;
-		@include breakpoint('small') {
-			margin-right: 3rem;
-		}
+    margin-right: 2rem;
 		@include breakpoint('extra-small') {
-			margin: 0;
+			margin-right: 0;
 		}
   }
 
   figcaption {
     margin-top: 1rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     color: $medium-gray;
     font-size: 1.5rem;
     line-height: 1.6;
 		@include breakpoint('extra-small') {
 			padding: 0;
+			font-size: 1.8rem;
 		}
   }
 }
@@ -250,10 +261,13 @@ img {
 
   sup {
     color: $light-gray;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 900;
+		@include breakpoint('extra-small') {
+			font-size: 1.5rem;
+		}
   }
 
   h2 {
@@ -265,6 +279,12 @@ img {
     line-height: 1.1;
     margin-bottom: 2.5rem;
   }
+
+	p {
+		@include breakpoint('extra-small') {
+			font-size: 2rem;
+		}
+	}
 
   img {
     max-width: 26rem;
@@ -525,14 +545,32 @@ img {
 
 .values {
 	padding-right: 0;
-	margin-bottom: 12rem;
+	margin-bottom: 8rem;
+	@include breakpoint('extra-small') {
+		padding-right: 2rem;
+	}
+
+	.paragraph-content {
+		min-width: 25rem;
+		@include breakpoint('extra-small') {
+			margin-bottom: 5rem;
+		}
+	}
 
 	&-list {
 		color: $white;
 		background: $blue;
 		flex-grow: 2;
 		margin-left: 5rem;
-		padding: 5rem 5rem 4rem;
+		padding: 5rem;
+		@include breakpoint('medium') {
+			margin-left: 3rem;
+		}
+		@include breakpoint('extra-small') {
+			margin-left: 0;
+			margin-bottom: 5rem;
+			padding: 4rem 3rem 3rem;
+		}
 
 		h3 {
 			font-weight: 700;
@@ -549,6 +587,9 @@ img {
 			margin: 0;
 			list-style: none;
 			font-size: 2.4rem;
+			@include breakpoint('medium') {
+				column-count: 1;
+			}
 
 			li {
 				margin-bottom: 2rem;
@@ -565,7 +606,6 @@ img {
 			height: 4rem;
 			text-align: center;
 			margin-right: 1.5rem;
-			line-height: 1.6;
 		}
 	}
 }

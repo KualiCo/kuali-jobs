@@ -14,5 +14,6 @@
 - [x] Test across modern browsers and devices
 - [x] Add parallax scripts
 - [x] Kill parallax effect on smaller/touch devices
-- [ ] Fix mobile issues (fonts not appearing, some horizontal scrolling)
+- [x] Fix mobile issues (fonts not appearing, some horizontal scrolling)
+- [ ] Consider eliminating non-accessible light grays
 - [ ] Code review

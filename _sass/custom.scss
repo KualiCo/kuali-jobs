@@ -18,6 +18,7 @@
 html {
 	height: 100%;
 	font-size: 62.5%;
+	overflow-x: hidden;
   @include breakpoint('extra-large') {
     font-size: 54.5%;
   }
@@ -155,6 +156,9 @@ a.logo-link {
       line-height: 1.1;
       font-weight: 400;
       margin: 0;
+			@include breakpoint('extra-small') {
+				font-weight: 700;
+			}
     }
 
     p {
@@ -271,7 +275,7 @@ img {
   h2 {
     color: $blue;
     font-size: 4rem;
-    margin-top: -0.5rem;
+    margin-top: 0;
     font-weight: 300;
     max-width: 30rem;
     line-height: 1.1;

@@ -43,6 +43,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background: $white;
+	overflow-x: hidden;
 }
 
 a {
@@ -58,7 +59,7 @@ a.logo-link {
 	transition: all .15s ease;
 
 	&:hover, &:focus {
-		transform: scale(1.05);
+		transform: scale(1.1);
 	}
 }
 
@@ -297,9 +298,6 @@ img {
   position: relative;
 	padding-top: 10rem;
 	padding-bottom: 10rem;
-	@include breakpoint('extra-large') {
-		overflow: hidden;
-	}
 	@include breakpoint('small') {
 		padding-top: 8rem;
 		padding-bottom: 0;
@@ -355,21 +353,12 @@ img {
 		right: 5rem;
 		top: 2rem;
 		background: url('../img/desk-gal-avocado-1.svg') no-repeat right 4rem top 10rem, url('../img/desk-gal-avocado-2.svg') no-repeat right top 40rem;
-		@include breakpoint('wide') {
-			background-position: right top, right top 30rem;
-			padding: 10rem;
-			margin: -10rem;
-		}
 		@include breakpoint('extra-large') {
 			right: -2rem;
-			background-position: right -10rem top, right -10rem top 30rem;
-		}
-		@include breakpoint('large') {
-			right: -5rem;
 		}
 		@include breakpoint('medium') {
-			background-position: right top 5rem, right top 35rem;
-			background-size: 35rem, 20rem;
+			background-position: right 5rem top 12rem, right 10rem top 50rem;
+			background-size: 40rem, 20rem;
 		}
 		@include breakpoint('small') {
 			display: none;
@@ -487,8 +476,8 @@ img {
 
       &.revenue {
         background-image: url('../img/bubble-blue.svg');
-				top: 20%;
-        left: 16%;
+				top: 30%;
+        left: 15%;
 				@include breakpoint('extra-small') {
 					top: 3rem;
 					left: 3rem;
@@ -497,8 +486,8 @@ img {
 
       &.insurance {
         background-image: url('../img/bubble-purple.svg');
-				top: 47%;
-        left: 16%;
+				top: 55%;
+        left: 15%;
 				@include breakpoint('extra-small') {
 					top: auto;
 					bottom: 3rem;
@@ -508,7 +497,7 @@ img {
 
       &.meetings {
         background-image: url('../img/bubble-gray.svg');
-				top: 75%;
+				top: 60%;
 				left: 45%;
 				@include breakpoint('extra-small') {
 					top: auto;
@@ -520,7 +509,7 @@ img {
 
       &.location {
         background-image: url('../img/bubble-green.svg');
-				top: 47%;
+				top: 30%;
 				left: 55%;
 				@include breakpoint('extra-small') {
 					top: 3rem;

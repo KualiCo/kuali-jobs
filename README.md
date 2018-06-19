@@ -12,7 +12,7 @@
 
 - [x] Make layout perfect on smaller screens
 - [x] Test across modern browsers and devices
-- [ ] Add parallax scripts
+- [x] Add parallax scripts
 - [ ] Code review
 
 ## Notes

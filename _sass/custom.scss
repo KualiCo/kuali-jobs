@@ -131,7 +131,7 @@ a.logo-link {
 		justify-content: flex-end;
 		@include breakpoint('small') {
 			justify-content: flex-start;
-			margin-top: 2rem;
+			margin: 2rem auto;
 		}
 	}
 
@@ -609,15 +609,15 @@ img {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@include breakpoint('medium') {
+		@include breakpoint('small') {
 	    flex-direction: column;
 			text-align: center;
-			padding: 5rem 2.5rem;
+			padding: 8rem 2.5rem;
 	  }
 	}
 
 	&-cta {
-		@include breakpoint('medium') {
+		@include breakpoint('small') {
 	    width: 100%;
 	  }
 
@@ -628,9 +628,9 @@ img {
 			margin-right: 4rem;
 			position: relative;
 			top: 0.5rem;
-			@include breakpoint('medium') {
+			@include breakpoint('small') {
 		    display: block;
-				margin-bottom: 3rem;
+				margin-bottom: 4rem;
 				margin-right: 0;
 		  }
 		}

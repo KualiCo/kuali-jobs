@@ -1,4 +1,8 @@
-# [Kuali's recruitment website](https://edelstone.github.io/kuali-jobs/)
+# [Kuali's recruitment website](https://jobs.kuali.co)
+
+## Installation
+
+This site uses [Jekyll](https://jekyllrb.com/) for templating and running locally. It's pretty easy to get up and running. Reach out to the Ops team for assistance.
 
 ## Tech used
 
@@ -8,12 +12,6 @@
 - [Google Web Fonts Helper](https://google-webfonts-helper.herokuapp.com/fonts) for hosting Roboto locally instead of relying on Google's servers
 - [Rellax JS](https://dixonandmoe.com/rellax/) for parallax effects
 
-## To do
+## Deployment
 
-- [x] Make layout perfect on smaller screens
-- [x] Test across modern browsers and devices
-- [x] Add parallax scripts
-- [x] Kill parallax effect on smaller/touch devices
-- [x] Fix mobile issues (fonts not appearing, some horizontal scrolling)
-- [x] Consider using higher contrast colors (almost none of the pairings are AA accessible)
-- [x] Code review
+Push your changes to `master`. When you're ready for the changes to be live, email [ops@kuali.co](mailto:ops@kuali.co) and let them know you'd like to deploy.

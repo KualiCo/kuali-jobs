@@ -1,6 +1,6 @@
 title: Careers at Kuali
 description: We hire great people and let them do what we hired them for. Crazy, right? Come to Kuali and you’ll love it as much as we do.
-url: https://jobs.kuali.co
+url: "https://jobs.kuali.co"
 
 plugins:
   - jekyll-sitemap

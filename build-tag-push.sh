@@ -4,7 +4,7 @@ repo='667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs'
 build_id=$(date +%s)
 
 function build() {
-  docker build -t kuali-cli .
+  docker build -t mkt-jobs .
 }
 
 function tag() {

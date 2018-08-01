@@ -1,14 +1,14 @@
 version: 0.1
 
 environment_variables:
- plaintext:
-  repo: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
+  plaintext:
+    REPO: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
 
 phases:
   pre_build:
     commands:
       - echo "--- Pre Build ---"
-      - echo "--- Logging in to repository ${repo}" ---"
+      - echo "--- Logging in to repository ${REPO}" ---"
       - $(aws ecr get-login --no-include-email)
   build:
     commands:

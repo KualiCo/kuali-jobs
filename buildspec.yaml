@@ -16,12 +16,12 @@ phases:
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
       - echo "--- Using Build Id $(cat .codebuild_version) ---"
       - docker build -t "${REPO}:latest" .
-      # # tag the new docker file with the build_id
-      # - docker tag "${repo}:latest" "${repo}:$(cat .codebuild_version)"
-      # # push the image with latest to the repo:
-      # - docker push "${repo}:latest"
-      # # push the image with the build id tag to the repo:
-      # - docker push "${repo}:$(cat .codebuild_version)"
+      # tag the new docker file with the build_id
+      - docker tag "${REPO}:latest" "${REPO}:$(cat .codebuild_version)"
+      # push the image with latest to the repo:
+      - docker push "${REPO}:latest"
+      # push the image with the build id tag to the repo:
+      - docker push "${REPO}:$(cat .codebuild_version)"
 
 artifacts:
   discard-paths: no

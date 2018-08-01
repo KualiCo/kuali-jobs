@@ -10,20 +10,19 @@ phases:
     commands:
       - echo "--- Pre Build ---"
       - echo "--- Logging in to repository ${REPO} ---"
-      - aws --version
-      - aws ecr get-login --no-include-email --region ${REGION} --registry-ids '667650582711'
+      - $(aws ecr get-login --no-include-email)
   build:
     commands:
       - echo "--- Build ---"
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
-      # - echo "--- Using Build Id: $(cat .codebuild_version) ---"
-      # - docker build -t "${repo}:latest" .
-      # # tag the new docker file with the build_id
-      # - docker tag "${repo}:latest" "${repo}:$(cat build_id)"
-      # # push the image with latest to the repo:
-      # - docker push "${repo}:latest"
-      # # push the image with the build id tag to the repo:
-      # - docker push "${repo}:$(cat build_id)"
+      - echo "--- Using Build Id: $(cat .codebuild_version) ---"
+      - docker build -t "${repo}:latest" .
+      # tag the new docker file with the build_id
+      - docker tag "${repo}:latest" "${repo}:$(cat .codebuild_version)"
+      # push the image with latest to the repo:
+      - docker push "${repo}:latest"
+      # push the image with the build id tag to the repo:
+      - docker push "${repo}:$(cat .codebuild_version)"
 
 artifacts:
   discard-paths: no

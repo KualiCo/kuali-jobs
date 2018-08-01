@@ -14,9 +14,8 @@ phases:
   build:
     commands:
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
-      # - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
-      # - echo "--- Using Build Id: $(cat .codebuild_version) ---"
-      # - docker build -t "${repo}:latest" .
+      - echo "--- Using Build Id $(cat .codebuild_version) ---"
+      - docker build -t "${repo}:latest" .
       # # tag the new docker file with the build_id
       # - docker tag "${repo}:latest" "${repo}:$(cat .codebuild_version)"
       # # push the image with latest to the repo:

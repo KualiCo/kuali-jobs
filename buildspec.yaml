@@ -1,31 +1,28 @@
 version: 0.1
 
-env:
-  variables:
-    repo: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
+environment_variables:
+ plaintext:
+  repo: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
 
 phases:
   pre_build:
     commands:
       - echo "--- Pre Build ---"
-      - echo "$(date +%s)" > build_id
-      - echo "--- Using Build Id: $(cat build_id) ---"
-      - echo "--- Logging in to repository ${repo}" ---"
-      - $(aws ecr get-login --no-include-email)
+      # - echo "$(date +%s)" > build_id
+      # - echo "--- Using Build Id: $(cat build_id) ---"
+      # - echo "--- Logging in to repository ${repo}" ---"
+      # - $(aws ecr get-login --no-include-email)
   build:
     commands:
       - echo "--- Build ---"
-      # build the dockerfile
-      - docker build -t "${repo}:latest" .
-      # tag the new docker file with the build_id
-      - docker tag "${repo}:latest" "${repo}:$(cat build_id)"
-      # push the image with latest to the repo:
-      - docker push "${repo}:latest"
-      # push the image with the build id tag to the repo:
-      - docker push "${repo}:$(cat build_id)"
-  post_build:
-    commands:
-      - echo "--- Post Build ---"
+      # # build the dockerfile
+      # - docker build -t "${repo}:latest" .
+      # # tag the new docker file with the build_id
+      # - docker tag "${repo}:latest" "${repo}:$(cat build_id)"
+      # # push the image with latest to the repo:
+      # - docker push "${repo}:latest"
+      # # push the image with the build id tag to the repo:
+      # - docker push "${repo}:$(cat build_id)"
 
 artifacts:
   discard-paths: no

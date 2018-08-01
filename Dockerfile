@@ -1,7 +1,8 @@
 FROM jekyll/jekyll:3.8
 
 WORKDIR /srv/jekyll
-COPY --chown="jekyll:jekyll" . /srv/jekyll
+COPY . /srv/jekyll
+RUN chown -R jekyll:jekyll /srv/jekyll
 
 RUN \
   /usr/jekyll/bin/bundle install && \

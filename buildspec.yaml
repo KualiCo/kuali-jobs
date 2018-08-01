@@ -10,6 +10,7 @@ phases:
     commands:
       - echo "--- Pre Build ---"
       - echo "--- Logging in to repository ${REPO} ---"
+      - aws --version
       - aws ecr get-login --no-include-email --region ${REGION} --registry-ids '667650582711'
   build:
     commands:

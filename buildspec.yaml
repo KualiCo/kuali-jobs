@@ -8,10 +8,10 @@ phases:
   pre_build:
     commands:
       - echo "--- Pre Build ---"
-      # - echo "$(date +%s)" > build_id
-      # - echo "--- Using Build Id: $(cat build_id) ---"
-      # - echo "--- Logging in to repository ${repo}" ---"
-      # - $(aws ecr get-login --no-include-email)
+      - echo "$(date +%s)" > build_id
+      - echo "--- Using Build Id: $(cat build_id) ---"
+      - echo "--- Logging in to repository ${repo}" ---"
+      - $(aws ecr get-login --no-include-email)
   build:
     commands:
       - echo "--- Build ---"

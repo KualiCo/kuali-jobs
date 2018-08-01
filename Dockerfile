@@ -1,4 +1,4 @@
-FROM "jekyll/jekyll:3.8"
+FROM jekyll/jekyll:3.8
 
 WORKDIR /srv/jekyll
 COPY --chown="jekyll:jekyll" . /srv/jekyll

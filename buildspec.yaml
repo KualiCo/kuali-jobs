@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - echo "--- Pre Build ---"
-      - echo "--- Logging in to repository ${REPO}" ---"
+      - echo "--- Logging in to repository ${REPO} ---"
       - $(aws ecr get-login --no-include-email)
   build:
     commands:

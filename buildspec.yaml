@@ -8,12 +8,11 @@ environment_variables:
 phases:
   pre_build:
     commands:
-      - echo "--- Pre Build ---"
       - echo "--- Logging in to repository ${REPO} ---"
       - $(aws ecr get-login --no-include-email)
+      - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
   build:
     commands:
-      - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
       - echo "--- Using Build Id $(cat .codebuild_version) ---"
       - docker build -t "${REPO}:latest" .
       # tag the new docker file with the build_id

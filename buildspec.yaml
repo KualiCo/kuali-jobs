@@ -8,14 +8,13 @@ phases:
   pre_build:
     commands:
       - echo "--- Pre Build ---"
-      - echo `date +%s` > build_id.txt
-      - echo "--- Using Build Id: $(cat build_id) ---"
       - echo "--- Logging in to repository ${repo}" ---"
       - $(aws ecr get-login --no-include-email)
   build:
     commands:
       - echo "--- Build ---"
-      # # build the dockerfile
+      - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
+      - echo "--- Using Build Id: $(cat .codebuild_version) ---"
       # - docker build -t "${repo}:latest" .
       # # tag the new docker file with the build_id
       # - docker tag "${repo}:latest" "${repo}:$(cat build_id)"

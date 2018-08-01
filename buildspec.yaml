@@ -26,6 +26,7 @@ phases:
   post_build:
     commands:
       - echo "--- Post Build ---"
+
 artifacts:
   discard-paths: no
   files:

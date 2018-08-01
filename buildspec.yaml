@@ -3,13 +3,14 @@ version: 0.1
 environment_variables:
   plaintext:
     REPO: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
+    REGION: "us-west-2"
 
 phases:
   pre_build:
     commands:
       - echo "--- Pre Build ---"
       - echo "--- Logging in to repository ${REPO} ---"
-      - $(aws ecr get-login --no-include-email)
+      - aws ecr get-login --no-include-email --region ${REGION} --registry-ids '667650582711'
   build:
     commands:
       - echo "--- Build ---"

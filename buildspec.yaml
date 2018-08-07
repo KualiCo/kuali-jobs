@@ -3,24 +3,22 @@ version: 0.1
 environment_variables:
   plaintext:
     REPO: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
-    REGION: "us-west-2"
 
 phases:
   pre_build:
     commands:
       - echo "--- Logging in to repository ${REPO} ---"
-      - $(aws ecr get-login --no-include-email)
-      - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
+      - $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
   build:
     commands:
-      - echo "--- Using Build Id $(cat .codebuild_version) ---"
+      - echo "--- Using Build Id ${CODEBUILD_BUILD_ID} ---"
       - docker build -t "${REPO}:latest" .
       # tag the new docker file with the build_id
-      - docker tag "${REPO}:latest" "${REPO}:$(cat .codebuild_version)"
+      - docker tag "${REPO}:latest" "${REPO}:${CODEBUILD_BUILD_ID}"
       # push the image with latest to the repo:
       - docker push "${REPO}:latest"
       # push the image with the build id tag to the repo:
-      - docker push "${REPO}:$(cat .codebuild_version)"
+      - docker push "${REPO}:${CODEBUILD_BUILD_ID}"
 
 artifacts:
   discard-paths: no

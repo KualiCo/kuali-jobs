@@ -14,7 +14,7 @@ phases:
       - $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
     finally:
-      - ./slack_notify.sh "pre_build complete for project ${REPO}"
+      - sh slack_notify.sh "pre_build complete for project ${REPO}"
   build:
     commands:
       - echo "--- Using Build Id $(cat .codebuild_version) ---"
@@ -26,12 +26,12 @@ phases:
       # push the image with the build id tag to the repo:
       - docker push "${REPO}:$(cat .codebuild_version)"
     finally:
-      - ./slack_notify.sh "build complete for project ${REPO}"
+      - sh slack_notify.sh "build complete for project ${REPO}"
   post_build:
     commands:
       - echo "doing post_build stuff."
     finally:
-      - ./slack_notify.sh "post_build complete for project ${REPO}"
+      - sh slack_notify.sh "post_build complete for project ${REPO}"
 artifacts:
   discard-paths: no
   files:

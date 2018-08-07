@@ -5,7 +5,7 @@ env:
     REPO: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
     SLACK_CHANNEL: "salt_noisy"
   parameter-store:
-    SLACK: "slack_token"
+    SLACK_TOKEN: "slack_token"
 
 phases:
   pre_build:

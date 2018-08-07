@@ -6,18 +6,16 @@
 #   --with-decryption \
 #   --query Parameters[0].Value \
 #   --output text)
-SLACK_TOKEN=${SLACK_TOKEN:-"Slack token not specified."}
-SLACK="https://hooks.slack.com/services/${SLACK_TOKEN}"
+SLACK_URL="https://hooks.slack.com/services/${SLACK_TOKEN}"
 USERNAME="AWS CodeBuild"
 ICON=":aws_cb:"
-CHANNEL=${SLACK_CHANNEL:-"ops-kcs"}
-echo "Using slack channel: $SLACK_CHANNEL"
+CHANNEL=${SLACK_CHANNEL:-"salt_noisy"}
 REPO=${REPO:-"No repo specified.  Set Variable REPO"}
-echo "Using repo REPO: $REPO"
-
 TEXT=$1
 COLOR=$2
 
+echo "Using slack channel: $SLACK_CHANNEL"
+echo "Using repo REPO: $REPO"
 attachments="{ \"color\": \"good\", \"text\": \"${TEXT}\" }"
 slack_message="{
   \"username\": \"${USERNAME}\",
@@ -30,7 +28,7 @@ slack_message="{
      \"text\": \"${TEXT}\"
    }]
 }"
-curl -X POST --data-urlencode "payload=$slack_message" ${SLACK}
+curl -X POST --data-urlencode "payload=$slack_message" ${SLACK_URL}
 
 exit 0
 

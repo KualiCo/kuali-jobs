@@ -26,4 +26,5 @@ slack_message="{
    }]
 }"
 curl -X POST --data-urlencode "payload=$slack_message" ${SLACK_URL}
+
 exit 0

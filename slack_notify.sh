@@ -2,7 +2,6 @@
 
 USERNAME="AWS CodeBuild"
 ICON=":aws_cb:"
-SLACK="https://hooks.slack.com/services/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"
 
 CHANNEL="#salt_noisy"
 TEXT_HEADER='667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs'

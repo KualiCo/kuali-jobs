@@ -10,7 +10,8 @@ env:
 phases:
   pre_build:
     commands:
-      - sh slack_notify.sh "starting build for: ${REPO}"
+      - chmod +x slack_notify.sh
+      - slack_notify.sh "starting build for: ${REPO}"
       - $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
     finally:

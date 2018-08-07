@@ -13,7 +13,7 @@ phases:
       - echo "--- Logging in to repository ${REPO} ---"
       - $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
-      - sh slack_notify.sh "Pre_Build Success for version $(cat .codebuild_version)" "good"
+      - ./slack_notify.sh "yay" "good"
   build:
     commands:
       - echo "--- Using Build Id $(cat .codebuild_version) ---"

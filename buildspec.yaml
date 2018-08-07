@@ -28,7 +28,8 @@ phases:
     finally:
       - ./slack_notify.sh "build complete for project ${REPO}"
   post_build:
-      - echo "post_build actions go here"
+    commands:
+      - exit 1
     finally:
       - ./slack_notify.sh "post_build complete for project ${REPO}"
 artifacts:

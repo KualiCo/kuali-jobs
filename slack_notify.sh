@@ -1,21 +1,14 @@
 #!/bin/bash
-
-# SLACK_TOKEN=$(aws ssm get-parameters \
-#   --region us-west-2 \
-#   --names slack_token \
-#   --with-decryption \
-#   --query Parameters[0].Value \
-#   --output text)
-SLACK_URL="https://hooks.slack.com/services/${SLACK_TOKEN}"
-USERNAME="AWS CodeBuild"
-ICON=":aws_cb:"
-CHANNEL=${SLACK_CHANNEL:-"salt_noisy"}
-REPO=${REPO:-"No repo specified.  Set Variable REPO"}
 if [ $CODEBUILD_BUILD_SUCCEEDING -eq 1 ] ; then
     COLOR='good'
 else
     COLOR='danger'
 fi
+SLACK_URL="https://hooks.slack.com/services/${SLACK_TOKEN}"
+USERNAME="AWS CodeBuild"
+ICON=":aws_cb:"
+CHANNEL=${SLACK_CHANNEL:-"salt_noisy"}
+REPO=${REPO:-"No repo specified.  Set Variable REPO"}
 TEXT=$1
 
 echo "Using slack channel: $SLACK_CHANNEL"
@@ -33,8 +26,4 @@ slack_message="{
    }]
 }"
 curl -X POST --data-urlencode "payload=$slack_message" ${SLACK_URL}
-
 exit 0
-
-
-# slack_notify.sh "good" "Docker Image XXXXXX has been pushed to the repository" ${SLACK} ${CHANNEL}

@@ -27,7 +27,10 @@ phases:
       - docker push "${REPO}:$(cat .codebuild_version)"
     finally:
       - ./slack_notify.sh "build complete for project ${REPO}"
-
+  post_build:
+      - exit 1
+    finally:
+      - ./slack_notify.sh "post_build complete for project ${REPO}"
 artifacts:
   discard-paths: no
   files:

@@ -10,14 +10,13 @@ env:
 phases:
   pre_build:
     commands:
-      - sh slack_notify.sh "starting pre_build project ${REPO}"
+      - sh slack_notify.sh "starting build for: ${REPO}"
       - $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
     finally:
       - sh slack_notify.sh "pre_build complete for project ${REPO}"
   build:
     commands:
-      - sh slack_notify.sh "starting build project ${REPO}"
       - docker build -t "${REPO}:latest" .
       # tag the new docker file with the build_id
       - docker tag "${REPO}:latest" "${REPO}:$(cat .codebuild_version)"
@@ -29,7 +28,7 @@ phases:
       - sh slack_notify.sh "build complete for project ${REPO}"
   post_build:
     commands:
-      - sh slack_notify.sh "starting post_build project ${REPO}"
+      - exit 0
     finally:
       - sh slack_notify.sh "post_build complete for project ${REPO}"
 artifacts:

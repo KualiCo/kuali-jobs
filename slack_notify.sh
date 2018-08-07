@@ -1,11 +1,11 @@
 #!/bin/bash
 
-SLACK_TOKEN=$(aws ssm get-parameters \
-  --region us-west-2 \
-  --names slack_token \
-  --with-decryption \
-  --query Parameters[0].Value \
-  --output text)
+# SLACK_TOKEN=$(aws ssm get-parameters \
+#   --region us-west-2 \
+#   --names slack_token \
+#   --with-decryption \
+#   --query Parameters[0].Value \
+#   --output text)
 SLACK="https://hooks.slack.com/services/${SLACK_TOKEN}"
 USERNAME="AWS CodeBuild"
 ICON=":aws_cb:"

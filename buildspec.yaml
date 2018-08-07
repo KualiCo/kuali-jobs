@@ -14,7 +14,7 @@ phases:
       - $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
       - sh slack_notify.sh
-      - PRINTENV
+      - printenv
   build:
     commands:
       - echo "--- Using Build Id $(cat .codebuild_version) ---"

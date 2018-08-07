@@ -3,6 +3,7 @@ version: 0.2
 env:
   variables:
     REPO: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
+    slack_channel: "salt_noisy"
   parameter-store:
     SLACK: "slack_token"
 
@@ -13,6 +14,7 @@ phases:
       - $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
       - echo "$(date +%Y%m%d%H%M%S)" > .codebuild_version
       - sh slack_notify.sh
+      - PRINTENV
   build:
     commands:
       - echo "--- Using Build Id $(cat .codebuild_version) ---"

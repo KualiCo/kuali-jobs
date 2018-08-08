@@ -1,0 +1,38 @@
+[
+  {
+    "client": "local",
+    "fun": "kcs.app_present",
+    "kwarg": {
+      "cnames": [
+        {
+          "name": "mkt-jobsite.kualiprivate.com.",
+          "ttl": 60,
+          "zone": "kualiprivate.com."
+        }
+      ],
+      "container_count": 1,
+      "container_definitions": {
+        "environment": [],
+        "essential": true,
+        "image": "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs:latest",
+        "memory": 512,
+        "name": "jobsite",
+        "portMappings": [
+          {
+            "containerPort": 4000,
+            "hostPort": 0
+          }
+        ]
+      },
+      "environment": "prod",
+      "lb_protocol": "HTTP",
+      "name": "jobsite",
+      "region": "us-west-2",
+      "scheme": "internal",
+      "slack_channel": "ops-team-noisy",
+      "team": "mkt"
+    },
+    "tgt": "salt*",
+    "eauth": "ldap"
+  }
+]

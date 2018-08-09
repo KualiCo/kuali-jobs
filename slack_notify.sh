@@ -4,7 +4,7 @@ USERNAME="AWS CodeBuild"
 ICON=":aws_cb:"
 CHANNEL=${SLACK_CHANNEL:-"salt_noisy"}
 REPO=${REPO:-"No repo specified.  Set Variable REPO"}
-COLOR='green'
+COLOR='good'
 TEXT=$1
 if [ $CODEBUILD_BUILD_SUCCEEDING -ne 1 ]; then COLOR='danger'; fi
 

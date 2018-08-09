@@ -1,18 +1,20 @@
 {
-    "AWSEBDockerrunVersion": 2,
-    "containerDefinitions": [
-        {
-            "environment": [],
-            "essential": true,
-            "image": "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs:latest",
-            "memory": 128,
-            "name": "jobsite",
-            "portMappings": [
-                {
-                    "containerPort": 4000,
-                    "hostPort": 0
-                }
-            ]
-        }
-    ]
+    "taskDefinition": {
+        "family": "mkt-jobsite-stg-task",
+        "containerDefinitions": [
+            {
+                "environment": [],
+                "essential": true,
+                "image": "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs:latest",
+                "memory": 128,
+                "name": "jobsite",
+                "portMappings": [
+                    {
+                        "containerPort": 4000,
+                        "hostPort": 0
+                    }
+                ]
+            }
+        ]
+    }
 }

@@ -1,21 +1,16 @@
-{
-    "taskDefinition": {
-        "family": "mkt-jobsite-stg-task",
-        "containerDefinitions": [
+[
+    {
+        "name": "jobsite",
+        "image": "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs:latest",
+        "cpu": 100,
+        "portMappings": [
             {
-                "name": "jobsite",
-                "image": "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs:latest",
-                "cpu": 100,
-                "portMappings": [
-                    {
-                        "protocol": "tcp",
-                        "containerPort": 4000,
-                        "hostPort": 0
-                    }
-                ],
-                "memory": 128,
-                "essential": true
+                "protocol": "tcp",
+                "containerPort": 4000,
+                "hostPort": 0
             }
-        ]
+        ],
+        "memory": 128,
+        "essential": true
     }
-}
+]

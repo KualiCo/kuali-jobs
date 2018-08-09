@@ -10,7 +10,8 @@ if [ $CODEBUILD_BUILD_SUCCEEDING -ne 1 ]; then COLOR='danger'; fi
 
 echo "Using slack channel: $SLACK_CHANNEL"
 echo "Using repo REPO: $REPO"
-attachments="{ \"color\": \"good\", \"text\": \"${TEXT}\" }"
+echo "Color detected as: $COLOR"
+echo "Build Success? : $CODEBUILD_BUILD_SUCCEEDING"
 slack_message="{
   \"username\": \"${USERNAME}\",
   \"icon_emoji\": \"${ICON}\",

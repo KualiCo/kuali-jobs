@@ -2,11 +2,11 @@
 SLACK_URL="https://hooks.slack.com/services/${SLACK_TOKEN}"
 USERNAME="AWS CodeBuild"
 ICON=":aws_cb:"
-CHANNEL=${SLACK_CHANNEL:-"salt_noisy"}
-REPO=${REPO:-"No repo specified.  Set Variable REPO"}
 COLOR='good'
 TEXT=$1
 if [ $CODEBUILD_BUILD_SUCCEEDING -ne 1 ]; then COLOR='danger'; fi
+if [ -z $SLACK_CHANNEL ]; then SLACK_CHANNEL='salt_noisy'; fi
+if [ -z $REPO ]; then REPO='NOT FOUND'; fi
 
 # Set message header
 ARRAY_CODEBUILD_BUILD_ID=(${CODEBUILD_BUILD_ID//:/ })
@@ -21,7 +21,7 @@ echo "Build Success? : $CODEBUILD_BUILD_SUCCEEDING"
 slack_message="{
   \"username\": \"${USERNAME}\",
   \"icon_emoji\": \"${ICON}\",
-  \"channel\": \"${CHANNEL}\",
+  \"channel\": \"${SLACK_CHANNEL}\",
   \"text\": \"${MSG}\",
   \"mrkdwn\": true,
   \"attachments\":[{

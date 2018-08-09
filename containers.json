@@ -3,17 +3,18 @@
         "family": "mkt-jobsite-stg-task",
         "containerDefinitions": [
             {
-                "environment": [],
-                "essential": true,
-                "image": "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs:latest",
-                "memory": 128,
                 "name": "jobsite",
+                "image": "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs:latest",
+                "cpu": 100,
                 "portMappings": [
                     {
+                        "protocol": "tcp",
                         "containerPort": 4000,
                         "hostPort": 0
                     }
-                ]
+                ],
+                "memory": 128,
+                "essential": true
             }
         ]
     }

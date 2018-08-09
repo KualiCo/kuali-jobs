@@ -8,20 +8,6 @@ COLOR='good'
 TEXT=$1
 if [ $CODEBUILD_BUILD_SUCCEEDING -ne 1 ]; then COLOR='danger'; fi
 
-
-users=(
-John
-Harry
-Jake
-Scott
-Philis
-)
-
-for u in "${users[@]}"
-do
-  echo "$u is a registered user"
-done
-
 # Set message header
 ARRAY_CODEBUILD_BUILD_ID=(${CODEBUILD_BUILD_ID//:/ })
 CODEBUILD_JOB=$(echo "${ARRAY_CODEBUILD_BUILD_ID[0]}")

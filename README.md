@@ -14,4 +14,4 @@ This site uses [Jekyll](https://jekyllrb.com/) for templating and running locall
 
 ## Deployment
 
-Push your changes to `master`. When you're ready for the changes to be live, email [ops@kuali.co](mailto:ops@kuali.co) and let them know you'd like to deploy.
+Content pushed to the `master` branch on GitHub will be deployed automatically.

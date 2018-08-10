@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     REPO: "667650582711.dkr.ecr.us-west-2.amazonaws.com/mkt-jobs"
-    SLACK_CHANNEL: "salt_noisy"
+    SLACK_CHANNEL: "website"
   parameter-store:
     SLACK_TOKEN: "slack_token"
 

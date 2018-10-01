@@ -119,10 +119,11 @@ a.logo-link {
 			background: url('../img/bubbles.svg') no-repeat center bottom;
 			padding-bottom: 12rem;
 			margin-bottom: -12rem;
-			background-size: 125rem;
+			background-size: 115rem;
 		}
 		@include breakpoint('extra-small') {
-			background-size: 95rem;
+			padding-bottom: 8rem;
+			background-size: 85rem;
 		}
 	}
 

@@ -1,13 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1093" height="320" viewBox="0 0 1093 320">
+<svg xmlns="http://www.w3.org/2000/svg" width="1124" height="350" viewBox="0 0 1124 350">
   <g fill="#3D7BB1" fill-rule="evenodd">
-    <circle cx="216" cy="173" r="96"/>
-    <circle cx="96" cy="183" r="96"/>
-    <circle cx="312.5" cy="209.836" r="76.5"/>
-    <circle cx="322.5" cy="149.836" r="76.5"/>
-    <circle cx="453.5" cy="171.836" r="112.5"/>
-    <circle cx="580.5" cy="206.836" r="112.5"/>
-    <circle cx="726.5" cy="162.836" r="112.5"/>
-    <circle cx="852.5" cy="112.836" r="112.5"/>
-    <circle cx="980.383" cy="132.836" r="112.5"/>
+    <circle cx="216" cy="203" r="96"/>
+    <circle cx="96" cy="193" r="96"/>
+    <circle cx="206" cy="113" r="96"/>
+    <circle cx="312.5" cy="239.836" r="76.5"/>
+    <circle cx="112.5" cy="109.836" r="76.5"/>
+    <circle cx="462.5" cy="79.836" r="76.5"/>
+    <circle cx="965.5" cy="80.5" r="76.5"/>
+    <circle cx="847.5" cy="249.836" r="76.5"/>
+    <circle cx="1047.5" cy="199.836" r="76.5"/>
+    <circle cx="997.5" cy="149.836" r="76.5"/>
+    <circle cx="947.5" cy="229.836" r="76.5"/>
+    <circle cx="732.5" cy="99.836" r="76.5"/>
+    <circle cx="322.5" cy="159.836" r="76.5"/>
+    <circle cx="433.5" cy="205.836" r="112.5"/>
+    <circle cx="580.5" cy="236.836" r="112.5"/>
+    <circle cx="726.5" cy="202.836" r="112.5"/>
+    <circle cx="606.5" cy="112.836" r="112.5"/>
+    <circle cx="356.5" cy="152.836" r="112.5"/>
+    <circle cx="852.5" cy="122.836" r="112.5"/>
   </g>
 </svg>

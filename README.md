@@ -1,6 +1,5 @@
 # [Kuali's recruitment website](https://jobs.kuali.co)
 
-
 ## Installation
 
 This site uses [Jekyll](https://jekyllrb.com/) for templating and running locally. It's pretty easy to get up and running. Reach out to the Ops team for assistance.

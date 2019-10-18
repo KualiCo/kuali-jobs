@@ -237,6 +237,10 @@ img {
 		}
   }
 
+	.stacked-image {
+		margin-bottom: 1rem;
+	}
+
   figcaption {
     margin-top: 1rem;
     padding: 0 1rem;
@@ -264,7 +268,6 @@ img {
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 900;
 		@include breakpoint('extra-small') {
 			font-size: 1.5rem;
 		}
